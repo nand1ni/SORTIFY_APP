@@ -3,6 +3,7 @@ package com.example.sortify_app;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
@@ -34,5 +35,13 @@ public class Splash_screen3 extends AppCompatActivity {
                 startActivity(new Intent(Splash_screen3.this,Loginpage.class));
             }
         });
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(Splash_screen3.this,Loginpage.class);
+                startActivity(intent);
+                finish();
+            }
+        },6000);
     }
 }
